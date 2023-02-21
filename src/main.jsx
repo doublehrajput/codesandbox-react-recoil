@@ -1,13 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'
-// import { FirstApp } from './FirstApp';
-import { CounterApp } from './CounterApp';
-// import { HelloWorldApp } from './HelloWorldApp';
-import './styles.css';
+import ReactDOM from "react-dom/client";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        {/* <HelloWorldApp/> */}
-        <CounterApp value={ 1998 }/>
-    </React.StrictMode>
-)
+import { RecoilEnv } from "recoil";
+
+RecoilEnv.RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED = false;
+
+import App from "@app/App";
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
